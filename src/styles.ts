@@ -8,14 +8,20 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
     :root {
         --black: #24292e;
         --white: #fff;
         --grey: #666;
 
         --underline: #f9826c;
-        --border: rgba(27,31,35,.15);
+        /* --border: rgba(27,31,35,.15); */
         --hover: rgba(209,213,218,.5);
+        --border: rgba(209,213,218,.5);
 
         --green-button: #2ea44f;
         --white-button: #fafbfc;

@@ -90,7 +90,6 @@ export const Header = styled.header`
             }
 
             figure {
-                /* flex: 1; */
                 width: 20px;
                 height: 20px;
                 margin: 0 12px;
