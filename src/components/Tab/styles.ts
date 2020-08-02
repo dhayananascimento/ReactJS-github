@@ -18,7 +18,6 @@ export const TabWrapper = styled.div`
 
         li {
             a {
-                display: block;
                 height: 100%;
 
                 display: flex;
@@ -31,11 +30,16 @@ export const TabWrapper = styled.div`
                 border-bottom: 3px solid transparent;
                 transition: border .4s;
 
+                svg {
+                    font-size: 15px;
+                    margin-right: 8px
+                }
+
                 span {
                     margin-left: 8px;
                     border-radius: 40%;
                     background-color: var(--hover);
-                    padding: 5px;
+                    padding: 8px;
                 }
 
                 &:hover {
@@ -52,7 +56,6 @@ export const TabWrapper = styled.div`
 
     @media (max-width: 767px) {
         ul {
-            /* width: 100%; */
             overflow-x: auto;
             padding: 0 16px;
         }

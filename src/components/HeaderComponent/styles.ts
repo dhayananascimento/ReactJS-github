@@ -21,14 +21,12 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
 
-    > div {
-        width: 20px;
-        height: 20px;
+    > figure:last-child {
         cursor: pointer;
         position: relative;
-        border-radius: 50%;
-        background-color: var(--white);
         flex-shrink: 0;
+
+        font-size: 20px;
 
         &::before {
             content: "";
@@ -38,18 +36,18 @@ export const Header = styled.header`
             background-color: var(--span);
             
             position: absolute;
-            top: -2px;
-            right: -5px;
+            top: 0;
+            right: 0;
         }
     }
 
     > figure {
-        width: 32px;
-        height: 32px;
         cursor: pointer;
         margin-right: 16px;
+
+        color: var(--white);
+        font-size: 30px;
         border-radius: 50%;
-        background-color: var(--white);
 
         transition: opacity 0.4s;
         flex-shrink: 0;
@@ -108,7 +106,7 @@ export const Header = styled.header`
                 transition: opacity 0.4s;
                 margin-right: 16px;
                 font-weight: bold;
-                font-size: 16px;
+                font-size: 14px;
 
                 &:hover {
                     opacity: 0.6;

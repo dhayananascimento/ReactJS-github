@@ -1,5 +1,6 @@
 import React from 'react'
 import { Footer } from './styles'
+import { FaGithub } from 'react-icons/fa'
 
 const FooterComponent:React.FC = () => {
     return (
@@ -13,7 +14,10 @@ const FooterComponent:React.FC = () => {
                 <li><a href="/">Help</a></li>
             </ul>
 
-            <figure title="ícone github"></figure>
+            <figure title="Ícone github">
+                <FaGithub />
+            </figure>
+            
 
             <ul>
                 <li><a href="/">Contact GitHub</a></li>

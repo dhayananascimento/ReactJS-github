@@ -1,10 +1,13 @@
 import React from 'react'
 import { Header } from './styles'
+import { FaGithub, FaBell } from 'react-icons/fa'
 
 const HeaderComponent:React.FC = () => {
     return (
         <Header>
-            <figure title="ícone github"></figure>
+            <figure title="Ícone github">
+                <FaGithub />
+            </figure>
 
             <nav>
                 <div>
@@ -19,7 +22,9 @@ const HeaderComponent:React.FC = () => {
                 </ul>
             </nav>
 
-            <div title="notificacões"></div>
+            <figure title="Notificacões">
+                <FaBell />
+            </figure>
 
         </Header>
     )

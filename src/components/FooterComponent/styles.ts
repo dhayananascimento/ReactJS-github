@@ -15,12 +15,11 @@ export const Footer = styled.footer`
         display: flex;
         flex-wrap: wrap;
 
+        &:first-child li:first-child {
+            font-size: 18px;
+        }
+
         li {
-
-            &:first-child {
-                font-size: 18px;
-            }
-
             color: var(--grey-text);
             font-size: 16px;
             margin-right: 16px;
@@ -37,10 +36,9 @@ export const Footer = styled.footer`
     }
 
     figure {
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: var(--black);
+        font-size: 20px;
+        color: var(--grey);
+        opacity: 0.7;
     }
 
     @media (max-width: 1011px) {
