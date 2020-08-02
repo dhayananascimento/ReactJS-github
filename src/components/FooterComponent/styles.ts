@@ -12,6 +12,7 @@ export const Footer = styled.footer`
     ul {
         list-style: none;
         display: flex;
+        flex-wrap: wrap;
 
         li {
 
@@ -32,7 +33,6 @@ export const Footer = styled.footer`
                 }
             }
         }
-
     }
 
     figure {

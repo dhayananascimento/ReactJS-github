@@ -13,7 +13,7 @@ const FooterComponent:React.FC = () => {
                 <li><a href="/">Help</a></li>
             </ul>
 
-            <figure title="icone github"></figure>
+            <figure title="ícone github"></figure>
 
             <ul>
                 <li><a href="/">Contact GitHub</a></li>

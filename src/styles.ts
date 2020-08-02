@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     :root {
         --black: #24292e;
         --white: #fff;
+        --grey: #666;
 
         --underline: #f9826c;
         --border: rgba(27,31,35,.15);
@@ -18,8 +19,10 @@ const GlobalStyles = createGlobalStyle`
 
         --green-button: #2ea44f;
         --white-button: #fafbfc;
+        --span: #0366d6;
 
         --grey-text: #666;
+        --white-text: #fff;
         --blue-text: #0366d6;
         --black-text: #24292e;
     }
