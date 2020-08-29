@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
         --green-button: #2ea44f;
         --white-button: #fafbfc;
         --span: #0366d6;
+        --icon: #aaa;
 
         --grey-text: #666;
         --white-text: #fff;
