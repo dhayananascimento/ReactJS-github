@@ -1,9 +1,9 @@
-import React from 'react';
-import GlobalStyles from './styles'
+import React from "react";
+import GlobalStyles from "./styles";
 
-import FooterComponent from './components/FooterComponent'
-import HeaderComponent from './components/HeaderComponent';
-import MainComponent from './components/MainComponent';
+import FooterComponent from "./components/FooterComponent";
+import HeaderComponent from "./components/HeaderComponent";
+import MainComponent from "./components/MainComponent";
 
 function App() {
   return (

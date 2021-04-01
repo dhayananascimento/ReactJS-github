@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Content:React.FC = () => {
-    return (
-        <h1>Content</h1>
-    )
-}
+const Content: React.FC = () => {
+  return <h1>Content</h1>;
+};
 
-export default Content
+export default Content;
