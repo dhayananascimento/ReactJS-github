@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
     }
 
@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
 
         --underline: #f9826c;
         /* --border: rgba(27,31,35,.15); */
-        --hover: rgba(209,213,218,.5);
+        --hover: rgba(209,213,218,.3);
         --border: rgba(209,213,218,.5);
 
         --green-button: #2ea44f;

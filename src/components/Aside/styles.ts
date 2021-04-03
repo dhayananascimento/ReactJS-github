@@ -23,8 +23,9 @@ export const ProfileWrapper = styled.div`
   }
 
   p {
+    word-wrap: break-word;
     font-size: 22px;
-    color: var(--grey);
+    color: var(--grey-text);
   }
 `;
 
@@ -40,7 +41,7 @@ export const EditableProfileInfoWrapper = styled.div`
     line-height: 32px;
 
     border: 1px solid var(--border);
-    background-color: #fafbfc;
+    background-color: var(--white-button);
     margin-bottom: 15px;
     border-radius: 6px;
     display: block;
@@ -48,6 +49,12 @@ export const EditableProfileInfoWrapper = styled.div`
     color: inherit;
     width: 100%;
     height: 32px;
+
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--hover);
+    }
   }
 `;
 
@@ -61,7 +68,7 @@ export const ProfileInfosWrapper = styled.ul`
 
   li {
     margin-left: 4px;
-    color: var(--black);
+    color: var(--black-text);
 
     a {
       text-decoration: none;
@@ -78,6 +85,14 @@ export const ProfileInfosWrapper = styled.ul`
         font-size: 14px;
         margin-right: 4px;
         color: var(--icon);
+      }
+    }
+
+    &:hover {
+      color: var(--blue-text);
+
+      a svg {
+        color: var(--blue-text);
       }
     }
   }
@@ -108,7 +123,7 @@ export const MoreInformationWrapper = styled.ul`
       color: inherit;
 
       &:hover {
-        color: pink;
+        color: var(--blue-text);
         text-decoration: underline;
       }
     }
