@@ -1,5 +1,5 @@
 import React from "react";
-import { Main } from "./styles";
+import { Main, ContentWrapper } from "./styles";
 
 import Tab from "../Tab";
 import Aside from "../Aside";
@@ -9,8 +9,10 @@ const MainComponent: React.FC = () => {
   return (
     <Main>
       <Tab />
-      <Aside />
-      {/* <Content /> */}
+      <ContentWrapper>
+        <Aside />
+        <Content />
+      </ContentWrapper>
     </Main>
   );
 };
