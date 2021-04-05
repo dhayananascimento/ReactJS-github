@@ -1,65 +1,67 @@
 import React from "react";
-import {
-  AsideWrapper,
-  ProfileWrapper,
-  ProfileInfosWrapper,
-  MoreInformationWrapper,
-  EditableProfileInfoWrapper,
-} from "./styles";
+import { Link } from "react-router-dom";
 import { FiStar, FiLink, FiMapPin, FiUsers } from "react-icons/fi";
+
+import {
+  Container,
+  ProfileInfosWrapper,
+  EditableProfileInfosWrapper,
+  ProfileInteractionWrapper,
+  MoreInfosWrapper,
+} from "./styles";
 
 const Aside: React.FC = () => {
   return (
-    <AsideWrapper>
+    <Container>
       <img
         src="https://avatars.githubusercontent.com/u/62670973?v=4"
         alt="foto do perfil"
       />
 
-      <ProfileWrapper>
+      <ProfileInfosWrapper>
         <strong>Dhayana</strong>
         <p>dhayananascimento</p>
-      </ProfileWrapper>
+      </ProfileInfosWrapper>
 
-      <EditableProfileInfoWrapper>
+      <EditableProfileInfosWrapper>
         <p>
           Desenvolvedora Front-End. Técnica em Informática Industrial. Graduanda
           em Sistemas de Informação.
         </p>
 
-        <a href="/">Edit profile</a>
+        <Link to="/">Edit profile</Link>
 
-        <ProfileInfosWrapper>
+        <ProfileInteractionWrapper>
           <li>
-            <a href="/">
+            <Link to="/">
               <FiUsers /> <span>50</span> followers .
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <span>41</span> following .
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <FiStar /> <span>13</span>
-            </a>
+            </Link>
           </li>
-        </ProfileInfosWrapper>
+        </ProfileInteractionWrapper>
 
-        <MoreInformationWrapper>
+        <MoreInfosWrapper>
           <li>
             <FiMapPin /> Minas Gerais
           </li>
           <li>
             <FiLink />
-            <a href="https://www.linkedin.com/in/dhayananascimento/">
+            <Link to="https://www.linkedin.com/in/dhayananascimento/">
               https://www.linkedin.com/in/dhayananascimento/
-            </a>
+            </Link>
           </li>
-        </MoreInformationWrapper>
-      </EditableProfileInfoWrapper>
-    </AsideWrapper>
+        </MoreInfosWrapper>
+      </EditableProfileInfosWrapper>
+    </Container>
   );
 };
 

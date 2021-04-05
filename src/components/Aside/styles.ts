@@ -1,35 +1,35 @@
 import styled from "styled-components";
 
-export const AsideWrapper = styled.div`
+export const Container = styled.div`
   width: 25%;
   padding: 0px 8px;
+  margin-top: -30px;
+
   display: flex;
   flex-direction: column;
-  margin-top: -30px;
 
   img {
     width: 100%;
-    height: auto;
+    object-fit: cover;
     border-radius: 50%;
-    margin: 0 auto;
   }
 `;
 
-export const ProfileWrapper = styled.div`
-  margin: 20px 0 20px;
+export const ProfileInfosWrapper = styled.div`
+  margin: 20px 0;
 
   strong {
     font-size: 28px;
   }
 
   p {
-    word-wrap: break-word;
     font-size: 22px;
+    word-wrap: break-word;
     color: var(--grey-text);
   }
 `;
 
-export const EditableProfileInfoWrapper = styled.div`
+export const EditableProfileInfosWrapper = styled.div`
   p {
     font-size: 18px;
     margin-bottom: 20px;
@@ -40,15 +40,15 @@ export const EditableProfileInfoWrapper = styled.div`
     text-align: center;
     line-height: 32px;
 
+    display: block;
+    color: inherit;
+    width: 100%;
+    height: 32px;
+
     border: 1px solid var(--border);
     background-color: var(--white-button);
     margin-bottom: 15px;
     border-radius: 6px;
-    display: block;
-
-    color: inherit;
-    width: 100%;
-    height: 32px;
 
     transition: background-color 0.2s;
 
@@ -58,10 +58,10 @@ export const EditableProfileInfoWrapper = styled.div`
   }
 `;
 
-export const ProfileInfosWrapper = styled.ul`
+export const ProfileInteractionWrapper = styled.ul`
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
 
   list-style: none;
   margin-bottom: 20px;
@@ -77,12 +77,10 @@ export const ProfileInfosWrapper = styled.ul`
 
       span {
         font-weight: bold;
-        font-size: 14px;
         margin-right: 4px;
       }
 
       svg {
-        font-size: 14px;
         margin-right: 4px;
         color: var(--icon);
       }
@@ -98,11 +96,12 @@ export const ProfileInfosWrapper = styled.ul`
   }
 `;
 
-export const MoreInformationWrapper = styled.ul`
+export const MoreInfosWrapper = styled.ul`
   list-style: none;
 
   li {
     display: flex;
+
     font-size: 14px;
     margin: 4px 0;
 

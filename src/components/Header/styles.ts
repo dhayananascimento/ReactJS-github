@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { FaGithub, FaBell } from "react-icons/fa";
 
-export const Header = styled.header`
+export const Container = styled.header`
   width: 100%;
   min-height: 62px;
   padding: 8px 16px;
@@ -17,7 +17,7 @@ export const Navigation = styled.nav`
   align-items: center;
 `;
 
-export const InputContainer = styled.div`
+export const InputWrapper = styled.div`
   input::placeholder {
     color: var(--white-text);
   }
@@ -36,18 +36,18 @@ export const InputContainer = styled.div`
   margin-right: 16px;
   border-radius: 5px;
 
+  width: 289px;
+  opacity: 0.7;
   color: var(--white-text);
   background-color: var(--black);
   border: 1px solid var(--grey);
-  opacity: 0.7;
-  width: 289px;
   transition: width 0.2s linear;
 
   input {
-    color: inherit;
     border: none;
     height: 30px;
     width: 245px;
+    color: inherit;
     font-size: 14px;
     padding: 0 12px;
     background-color: transparent;
@@ -86,9 +86,9 @@ export const InputContainer = styled.div`
   }
 
   &:focus-within {
-    background-color: var(--white);
     opacity: 1;
     width: 500px;
+    background-color: var(--white);
   }
 
   @media (max-width: 950px) {
@@ -100,6 +100,7 @@ export const InputContainer = styled.div`
 
 export const List = styled.ul`
   list-style: none;
+
   display: flex;
   flex-shrink: 0;
 
@@ -121,7 +122,7 @@ export const List = styled.ul`
   }
 `;
 
-export const ContainerBell = styled.figure`
+export const BellWrapper = styled.figure`
   position: relative;
   width: 20px;
 

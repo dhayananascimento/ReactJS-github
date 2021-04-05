@@ -1,18 +1,13 @@
 import React from "react";
 import GlobalStyles from "./styles";
 
-import FooterComponent from "./components/FooterComponent";
-import HeaderComponent from "./components/HeaderComponent";
-import MainComponent from "./components/MainComponent";
+import Routes from "./routes";
 
 function App() {
   return (
     <React.Fragment>
-      <HeaderComponent />
-      <MainComponent />
-      <FooterComponent />
-
       <GlobalStyles />
+      <Routes />
     </React.Fragment>
   );
 }

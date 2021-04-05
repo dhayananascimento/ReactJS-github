@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-export const TabsWrapper = styled.div`
+export const Container = styled.div`
   width: 100%;
   border-bottom: 1px solid var(--border);
 `;
 
-export const Tabs = styled.div`
+export const TabsWrapper = styled.div`
   width: 100%;
-  height: 48px;
   max-width: 1280px;
+  height: 48px;
   margin: 0 auto;
 
   @media (max-width: 767px) {
@@ -17,22 +17,23 @@ export const Tabs = styled.div`
 `;
 
 export const List = styled.ul`
-  width: 75%;
   list-style: none;
-  display: flex;
   margin-left: 25%;
+  width: 75%;
+
+  display: flex;
 
   li {
     a {
-      height: 48px;
-
       display: flex;
       align-items: center;
 
+      height: 48px;
       font-size: 14px;
-      text-decoration: none;
       padding: 8px 16px;
+      text-decoration: none;
       color: var(--black-text);
+
       border-bottom: 3px solid transparent;
       transition: border 0.4s;
 
@@ -43,10 +44,10 @@ export const List = styled.ul`
       }
 
       span {
+        padding: 8px;
         margin-left: 8px;
         border-radius: 40%;
         background-color: var(--hover);
-        padding: 8px;
       }
 
       &:hover {
@@ -54,8 +55,8 @@ export const List = styled.ul`
       }
 
       &.active {
-        border-bottom: 3px solid var(--underline);
         font-weight: bold;
+        border-bottom: 3px solid var(--underline);
 
         svg {
           color: var(--black);
@@ -65,8 +66,8 @@ export const List = styled.ul`
   }
 
   @media (max-width: 767px) {
-    padding: 0 16px;
     width: 100%;
     margin-left: 0;
+    padding: 0 16px;
   }
 `;

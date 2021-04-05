@@ -1,13 +1,24 @@
 import styled from "styled-components";
 
-export const ContentContainer = styled.div`
+export const ContentWrapper = styled.div`
+  max-width: 1280px;
+  padding: 0 24px;
+  margin: 0 auto;
+
+  display: flex;
+`;
+
+
+export const Content = styled.div`
   width: 100%;
   padding: 0 8px;
   color: var(--black-text);
 `;
 
+
 export const SearchWrapper = styled.div`
   display: flex;
+
   padding: 20px 0;
   border-bottom: 1px solid var(--border);
 
@@ -28,12 +39,12 @@ export const SearchWrapper = styled.div`
     padding: 5px 10px;
     margin-right: 15px;
 
-    transition: background-color 0.2s;
-
     cursor: pointer;
     border-radius: 6px;
     border: 1px solid var(--border);
     background-color: var(--white-button);
+
+    transition: background-color 0.2s;
 
     &:hover {
       background-color: var(--hover);
@@ -44,11 +55,11 @@ export const SearchWrapper = styled.div`
     opacity: 0.9;
     height: 32px;
     padding: 5px 10px;
-    border-radius: 6px;
     text-decoration: none;
     color: var(--white-text);
-    background-color: var(--green-button);
 
+    border-radius: 6px;
+    background-color: var(--green-button);
     transition: opacity 0.2s;
 
     display: flex;

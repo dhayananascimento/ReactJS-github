@@ -1,36 +1,37 @@
 import React from "react";
-import { TabsWrapper, Tabs, List } from "./styles";
+import { Link } from "react-router-dom";
 import { FiBookOpen, FiBook, FiFolder, FiBox } from "react-icons/fi";
+import { Container, TabsWrapper, List } from "./styles";
 
-const Tab: React.FC = () => {
+const Tabs: React.FC = () => {
   return (
-    <TabsWrapper>
-      <Tabs>
+    <Container>
+      <TabsWrapper>
         <List>
           <li>
-            <a href="/">
+            <Link to="/">
               <FiBookOpen /> Overview
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="active">
+            <Link to="/" className="active">
               <FiBook /> Repositories <span>40</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <FiFolder /> Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <FiBox /> Packages
-            </a>
+            </Link>
           </li>
         </List>
-      </Tabs>
-    </TabsWrapper>
+      </TabsWrapper>
+    </Container>
   );
 };
 
-export default Tab;
+export default Tabs;
