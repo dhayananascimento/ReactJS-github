@@ -4,7 +4,7 @@ import { Container, Main } from "./styles";
 import Footer from "../Footer";
 import Header from "../Header";
 
-const Template: React.FC = ({ children }: any) => {
+const Template: React.FC = ({ children }) => {
   return (
     <Container>
       <Header />
