@@ -8,13 +8,11 @@ export const ContentWrapper = styled.div`
   display: flex;
 `;
 
-
 export const Content = styled.div`
   width: 100%;
   padding: 0 8px;
   color: var(--black-text);
 `;
-
 
 export const SearchWrapper = styled.div`
   display: flex;
@@ -75,35 +73,7 @@ export const SearchWrapper = styled.div`
   }
 `;
 
-export const RepositoryWrapper = styled.div`
+export const RepositoriesWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  > div {
-    padding: 24px 0;
-    border-bottom: 1px solid var(--border);
-
-    a {
-      font-size: 20px;
-      font-weight: bold;
-      color: var(--blue-text);
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    > div {
-      p {
-        font-size: 12px;
-        margin-top: 12px;
-
-        &:nth-child(1) {
-          margin-right: 10px;
-        }
-      }
-      display: flex;
-    }
-  }
 `;

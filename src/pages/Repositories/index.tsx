@@ -4,13 +4,14 @@ import {
   ContentWrapper,
   Content,
   SearchWrapper,
-  RepositoryWrapper,
+  RepositoriesWrapper,
 } from "./styles";
 import { FiBook } from "react-icons/fi";
 
+import Repository from "../../components/Repository";
 import Template from "../../components/Template";
-import Tabs from "../../components/Tabs";
 import Aside from "../../components/Aside";
+import Tabs from "../../components/Tabs";
 
 function Repositories() {
   return (
@@ -49,29 +50,21 @@ function Repositories() {
             </Link>
           </SearchWrapper>
 
-          <RepositoryWrapper>
-            <div>
-              <Link to="/">Repositório 1</Link>
-              <div>
-                <p>
-                  {" "}
-                  <span></span> TypeScript
-                </p>{" "}
-                <p>Updated 8 days ago</p>
-              </div>
-            </div>
+          <RepositoriesWrapper>
+            <Repository
+              name="Repositorio 1"
+              url="/"
+              language="HTML"
+              updated="2021/01/01"
+            />
 
-            <div>
-              <Link to="/">Repositório 2</Link>
-              <div>
-                <p>
-                  {" "}
-                  <span></span>HTML
-                </p>{" "}
-                <p>Updated 8 days ago</p>
-              </div>
-            </div>
-          </RepositoryWrapper>
+            <Repository
+              name="Repositorio 2"
+              url="/"
+              language="CSS"
+              updated="2021/02/02"
+            />
+          </RepositoriesWrapper>
         </Content>
       </ContentWrapper>
     </Template>
