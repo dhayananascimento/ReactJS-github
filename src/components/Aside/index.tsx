@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiStar, FiLink, FiMapPin, FiUsers } from "react-icons/fi";
+import {
+  FiStar,
+  FiLink,
+  FiMapPin,
+  FiUsers,
+  FiTwitter,
+  FiCoffee,
+} from "react-icons/fi";
 
 import {
   Container,
@@ -10,54 +17,96 @@ import {
   MoreInfosWrapper,
 } from "./styles";
 
-const Aside: React.FC = () => {
+interface IAside {
+  login: string;
+  name: string;
+  avatar: string;
+  stars: number;
+  followers: number;
+  following: number;
+  
+  bio?: string;
+  location?: string;
+  blog?: string;
+  twitter?: string;
+  company?: string;
+}
+
+const Aside: React.FC<IAside> = ({
+  login,
+  name,
+  avatar,
+  bio,
+  stars,
+  followers,
+  following,
+  twitter,
+  company,
+  location,
+  blog,
+}) => {
   return (
     <Container>
-      <img
-        src="https://avatars.githubusercontent.com/u/62670973?v=4"
-        alt="foto do perfil"
-      />
+      <img src={avatar} alt={name} />
 
       <ProfileInfosWrapper>
-        <strong>Dhayana</strong>
-        <p>dhayananascimento</p>
+        <strong>{name}</strong>
+        <p>{login}</p>
       </ProfileInfosWrapper>
 
       <EditableProfileInfosWrapper>
-        <p>
-          Desenvolvedora Front-End. Técnica em Informática Industrial. Graduanda
-          em Sistemas de Informação.
-        </p>
+        {bio && <p>{bio}</p>}
 
         <Link to="/">Edit profile</Link>
 
         <ProfileInteractionWrapper>
           <li>
             <Link to="/">
-              <FiUsers /> <span>50</span> followers .
+              <FiUsers /> <span>{followers}</span> followers .
             </Link>
           </li>
           <li>
             <Link to="/">
-              <span>41</span> following .
+              <span>{following}</span> following .
             </Link>
           </li>
           <li>
             <Link to="/">
-              <FiStar /> <span>13</span>
+              <FiStar /> <span>{stars}</span>
             </Link>
           </li>
         </ProfileInteractionWrapper>
 
         <MoreInfosWrapper>
           <li>
-            <FiMapPin /> Minas Gerais
+            {company && (
+              <>
+                <FiCoffee /> {company}
+              </>
+            )}
           </li>
           <li>
-            <FiLink />
-            <Link to="https://www.linkedin.com/in/dhayananascimento/">
-              https://www.linkedin.com/in/dhayananascimento/
-            </Link>
+            {location && (
+              <>
+                <FiMapPin /> {location}
+              </>
+            )}
+          </li>
+          <li>
+            {blog && (
+              <>
+                <FiLink />
+                <a href={blog}>{blog}</a>
+              </>
+            )}
+          </li>
+          <li>
+            {twitter && (
+              <>
+                <FiTwitter /> 
+                <a href={`https://twitter.com/${twitter}`}>{twitter}</a>
+              </>
+            )}
           </li>
         </MoreInfosWrapper>
       </EditableProfileInfosWrapper>

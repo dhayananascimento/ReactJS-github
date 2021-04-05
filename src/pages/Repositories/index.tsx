@@ -19,7 +19,17 @@ function Repositories() {
       <Tabs />
 
       <ContentWrapper>
-        <Aside />
+        <Aside
+          name="Dhayana"
+          login="dhayananascimento"
+          bio="bio"
+          avatar="https://avatars.githubusercontent.com/u/62670973?v=4"
+          stars={2}
+          followers={20}
+          following={20}
+          location="Minas Gerais"
+          blog="https://www.linkedin.com/in/dhayananascimento/"
+        />
 
         <Content>
           <SearchWrapper>
