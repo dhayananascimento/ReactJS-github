@@ -16,7 +16,7 @@ import Tabs from "../../components/Tabs";
 function Repositories() {
   return (
     <Template>
-      <Tabs />
+      <Tabs activeTab="REPOSITORIES" />
 
       <ContentWrapper>
         <Aside
