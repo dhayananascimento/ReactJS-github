@@ -4,7 +4,7 @@ Este é um projeto com a finalidade de treinar habilidades referentes ao ReactJS
 
 ## Layout
 
-<img src="github-clone.gif" alt= "imagem github clone">
+<img src="./public/github-clone.gif" alt= "imagem github clone">
 
 ## Tecnologias
 
