@@ -5,6 +5,7 @@ import { Container, TabsWrapper, List } from "./styles";
 
 interface ITabs {
   activeTab?: string;
+  numberOfRepos: number;
 }
 
 const tabs = {
@@ -14,7 +15,7 @@ const tabs = {
   PACKAGES: "PACKAGES",
 };
 
-const Tabs: React.FC<ITabs> = ({ activeTab }) => {
+const Tabs: React.FC<ITabs> = ({ activeTab, numberOfRepos }) => {
   return (
     <Container>
       <TabsWrapper>
@@ -32,7 +33,7 @@ const Tabs: React.FC<ITabs> = ({ activeTab }) => {
               to="/"
               className={tabs.REPOSITORIES === activeTab ? "active" : undefined}
             >
-              <FiBook /> Repositories <span>40</span>
+              <FiBook /> Repositories <span>{numberOfRepos}</span>
             </Link>
           </li>
           <li>

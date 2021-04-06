@@ -77,3 +77,9 @@ export const RepositoriesWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+
+export const ActivityIndicator = styled.h1`
+  text-align: center;
+  margin: auto 0;
+`

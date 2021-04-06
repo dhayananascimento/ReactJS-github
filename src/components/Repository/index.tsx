@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Container } from "./styles";
 
 interface IRepository {
@@ -15,14 +14,16 @@ const Repository: React.FC<IRepository> = ({
   language,
   updated,
 }) => {
+  const updatedAt = new Date(updated).toDateString();
+
   return (
     <Container>
-      <Link to={url}>{name}</Link>
+      <a href={url}>{name}</a>
 
       <div>
         <p>{language}</p>
 
-        <p>Updated at {updated}</p>
+        <p>Updated at {updatedAt} </p>
       </div>
     </Container>
   );

@@ -24,7 +24,7 @@ interface IAside {
   stars: number;
   followers: number;
   following: number;
-  
+
   bio?: string;
   location?: string;
   blog?: string;
@@ -103,7 +103,7 @@ const Aside: React.FC<IAside> = ({
           <li>
             {twitter && (
               <>
-                <FiTwitter /> 
+                <FiTwitter />
                 <a href={`https://twitter.com/${twitter}`}>{twitter}</a>
               </>
             )}
