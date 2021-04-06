@@ -1,20 +1,28 @@
-https://api.github.com/users/dhayananascimento
-=> login
-=> avatar_url
-=> html_url
-=> bio
-=> public_repos
-=> followers
-=> following
-=> location
-=> blog
+# GitHub - Clone
 
-https://api.github.com/users/dhayananascimento/repos
-=> name
-=> language
-=> html_url
+Este é um projeto com a finalidade de treinar habilidades referentes ao ReactJS, Styled Components e TypeScript. Consiste em um clone da página de repositórios do GitHub (com pequenas alterações).
 
-https://api.github.com/users/dhayananascimento/starred
-=> retorno.lenght
+## Layout
 
-sem retorno = null
+<img src="github-clone.gif" alt= "imagem github clone">
+
+## Tecnologias
+
+- ReactJS
+- Styled Components
+- Axios
+
+## Linguagens
+
+- TypeScript
+
+## Executar
+
+**Para executar este projeto na sua máquina, execute os seguintes comandos no seu terminal:**
+
+```
+$ git clone https://github.com/dhayananascimento/ReactJS-github.git
+$ cd ReactJS-github
+$ yarn install
+$ yarn start
+```
