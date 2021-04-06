@@ -47,11 +47,13 @@ const Aside: React.FC<IAside> = ({
 }) => {
   return (
     <Container>
-      <img src={avatar} alt={name} />
-
       <ProfileInfosWrapper>
-        <strong>{name}</strong>
-        <p>{login}</p>
+        <img src={avatar} alt={name} />
+
+        <div>
+          <strong>{name}</strong>
+          <p>{login}</p>
+        </div>
       </ProfileInfosWrapper>
 
       <EditableProfileInfosWrapper>

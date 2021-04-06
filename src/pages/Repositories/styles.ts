@@ -6,6 +6,10 @@ export const ContentWrapper = styled.div`
   margin: 0 auto;
 
   display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 export const Content = styled.div`
@@ -16,6 +20,7 @@ export const Content = styled.div`
 
 export const SearchWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
 
   padding: 20px 0;
   border-bottom: 1px solid var(--border);
@@ -25,6 +30,7 @@ export const SearchWrapper = styled.div`
     height: 32px;
     padding: 10px;
     font-size: 14px;
+    margin-top: 5px;
     margin-right: 15px;
 
     border: 1px solid var(--border);
@@ -35,6 +41,7 @@ export const SearchWrapper = styled.div`
     height: 32px;
     font-size: 14px;
     padding: 5px 10px;
+    margin-top: 5px;
     margin-right: 15px;
 
     cursor: pointer;
@@ -53,6 +60,7 @@ export const SearchWrapper = styled.div`
     opacity: 0.9;
     height: 32px;
     padding: 5px 10px;
+    margin-top: 5px;
     text-decoration: none;
     color: var(--white-text);
 

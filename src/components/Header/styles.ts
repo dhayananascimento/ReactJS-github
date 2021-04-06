@@ -14,6 +14,7 @@ export const Container = styled.header`
 export const Navigation = styled.nav`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 `;
 
@@ -96,13 +97,23 @@ export const InputWrapper = styled.div`
       width: 100%;
     }
   }
+
+  @media (max-width: 767px) {
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
 `;
 
 export const List = styled.ul`
   list-style: none;
+  margin: 5px 0;
 
   display: flex;
   flex-shrink: 0;
+  flex-wrap: wrap;
 
   li {
     color: var(--white-text);
@@ -119,6 +130,10 @@ export const List = styled.ul`
       color: inherit;
       text-decoration: none;
     }
+  }
+
+  @media (max-width: 767px) {
+    flex-shrink: 1;
   }
 `;
 

@@ -8,15 +8,22 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  img {
+  @media (max-width: 767px) {
     width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+    margin-top: 20px;
   }
 `;
 
 export const ProfileInfosWrapper = styled.div`
-  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
 
   strong {
     font-size: 28px;
@@ -26,6 +33,18 @@ export const ProfileInfosWrapper = styled.div`
     font-size: 22px;
     word-wrap: break-word;
     color: var(--grey-text);
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
   }
 `;
 

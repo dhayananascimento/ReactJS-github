@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
+  overflow: auto;
   border-bottom: 1px solid var(--border);
 `;
 
