@@ -6,8 +6,8 @@ export const Container = styled.footer`
   max-width: 1280px;
   margin: 0 auto 40px;
   padding: 40px 10px 8px;
-  border-top: 1px solid var(--border);
-
+  border-top: 1px solid ${(props) => props.theme.colors.primaryBorder};
+  background-color: ${(props) => props.theme.colors.background};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,10 +31,10 @@ export const List = styled.ul`
   li {
     font-size: 16px;
     margin-right: 16px;
-    color: var(--grey-text);
+    color: ${(props) => props.theme.colors.secundaryText};
 
     a {
-      color: var(--blue-text);
+      color: ${(props) => props.theme.colors.blue};
       text-decoration: none;
 
       &:hover {

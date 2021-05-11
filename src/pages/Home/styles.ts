@@ -15,7 +15,7 @@ export const ContentWrapper = styled.div`
 export const Content = styled.div`
   width: 100%;
   padding: 0 8px;
-  color: var(--black-text);
+  color: ${(props) => props.theme.colors.primaryText};
 `;
 
 export const SearchWrapper = styled.div`
@@ -23,7 +23,7 @@ export const SearchWrapper = styled.div`
   flex-wrap: wrap;
 
   padding: 20px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid ${(props) => props.theme.colors.primaryBorder};
 
   input {
     flex: 1;
@@ -33,7 +33,13 @@ export const SearchWrapper = styled.div`
     margin-top: 5px;
     margin-right: 15px;
 
-    border: 1px solid var(--border);
+    color: ${(props) => props.theme.colors.primaryText};
+    border: 1px solid
+      ${(props) =>
+        props.theme.title === "light"
+          ? props.theme.colors.primaryBorder
+          : props.theme.colors.secundaryBorder};
+    background-color: ${(props) => props.theme.colors.background};
     border-radius: 6px;
   }
 
@@ -46,10 +52,16 @@ export const SearchWrapper = styled.div`
 
     cursor: pointer;
     border-radius: 6px;
-    border: 1px solid var(--border);
-    background-color: var(--white-button);
-
     transition: background-color 0.2s;
+
+    color: ${(props) => props.theme.colors.primaryText};
+    border: 1px solid ${(props) => props.theme.colors.primaryBorder};
+    background-color: ${(props) => props.theme.colors.primaryButton};
+
+    option {
+      color: ${(props) => props.theme.colors.primaryText};
+      background-color: ${(props) => props.theme.colors.primaryButton};
+    }
 
     &:hover {
       background-color: var(--hover);
@@ -62,7 +74,7 @@ export const SearchWrapper = styled.div`
     padding: 5px 10px;
     margin-top: 5px;
     text-decoration: none;
-    color: var(--white-text);
+    color: var(--white);
 
     border-radius: 6px;
     background-color: var(--green-button);
@@ -86,8 +98,7 @@ export const RepositoriesWrapper = styled.div`
   flex-direction: column;
 `;
 
-
 export const ActivityIndicator = styled.h1`
   text-align: center;
   margin: auto 0;
-`
+`;

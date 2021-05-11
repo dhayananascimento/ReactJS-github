@@ -5,7 +5,7 @@ export const Container = styled.header`
   width: 100%;
   min-height: 62px;
   padding: 8px 16px;
-  background-color: var(--black);
+  background-color: ${(props) => props.theme.colors.header};
 
   display: flex;
   align-items: center;
@@ -20,15 +20,15 @@ export const Navigation = styled.nav`
 
 export const InputWrapper = styled.div`
   input::placeholder {
-    color: var(--white-text);
+    color: ${(props) => props.theme.colors.headerText};
   }
 
   input:-ms-input-placeholder {
-    color: var(--white-text);
+    color: ${(props) => props.theme.colors.headerText};
   }
 
   input::-ms-input-placeholder {
-    color: var(--white-text);
+    color: ${(props) => props.theme.colors.headerText};
   }
 
   display: flex;
@@ -39,9 +39,12 @@ export const InputWrapper = styled.div`
 
   width: 289px;
   opacity: 0.7;
-  color: var(--white-text);
-  background-color: var(--black);
-  border: 1px solid var(--grey);
+  color: ${(props) => props.theme.colors.headerText};
+  background-color: ${(props) =>
+    props.theme.title === "light"
+      ? "transparent"
+      : props.theme.colors.background};
+  border: 1px solid ${(props) => props.theme.colors.secundaryBorder};
   transition: width 0.2s linear;
 
   input {
@@ -62,7 +65,8 @@ export const InputWrapper = styled.div`
     line-height: 20px;
     text-align: center;
     border-radius: 5px;
-    border: 1px solid var(--grey);
+    color: ${(props) => props.theme.colors.secundaryText};
+    border: 1px solid ${(props) => props.theme.colors.secundaryBorder};
   }
 
   &:focus-within figure {
@@ -70,26 +74,26 @@ export const InputWrapper = styled.div`
   }
 
   &:focus-within input {
-    color: var(--black-text);
+    color: ${(props) => props.theme.colors.primaryText};
     width: 100%;
   }
 
   &:focus-within input::placeholder {
-    color: var(--black-text);
+    color: ${(props) => props.theme.colors.primaryText};
   }
 
   &:focus-within input:-ms-input-placeholder {
-    color: var(--black-text);
+    color: ${(props) => props.theme.colors.primaryText};
   }
 
   &:focus-within input::-ms-input-placeholder {
-    color: var(--black-text);
+    color: ${(props) => props.theme.colors.primaryText};
   }
 
   &:focus-within {
     opacity: 1;
     width: 500px;
-    background-color: var(--white);
+    background-color: ${(props) => props.theme.colors.background};
   }
 
   @media (max-width: 950px) {
@@ -116,7 +120,7 @@ export const List = styled.ul`
   flex-wrap: wrap;
 
   li {
-    color: var(--white-text);
+    color: ${(props) => props.theme.colors.headerText};
     transition: opacity 0.4s;
     margin-right: 16px;
     font-weight: bold;
@@ -149,7 +153,7 @@ export const BellWrapper = styled.figure`
 
     opacity: 1 !important;
     border-radius: 50%;
-    background-color: var(--span);
+    background-color: ${(props) => props.theme.colors.blue};
 
     position: absolute;
     top: 0;

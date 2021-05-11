@@ -10,14 +10,18 @@ import {
   BellIcon,
 } from "./styles";
 
-const Header: React.FC = () => {
+interface IHeader {
+  theme: () => void;
+}
+
+const Header: React.FC<IHeader> = ({ theme }) => {
   return (
     <Container>
-      <GitHubIcon title="Ícone github" />
+      <GitHubIcon title="Ícone github" onClick={theme} />
 
       <Navigation>
         <InputWrapper>
-          <input placeholder="Search or jump to..." type="text" />
+          <input placeholder="Search or jump to..." type="text" aria-label="Search or jump to..." />
           <figure>/</figure>
         </InputWrapper>
 

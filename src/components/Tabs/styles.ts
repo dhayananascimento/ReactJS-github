@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   overflow: auto;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid ${(props) => props.theme.colors.primaryBorder};
 `;
 
 export const TabsWrapper = styled.div`
@@ -33,10 +33,10 @@ export const List = styled.ul`
       font-size: 14px;
       padding: 8px 16px;
       text-decoration: none;
-      color: var(--black-text);
+      color: ${(props) => props.theme.colors.primaryText};
 
       border-bottom: 3px solid transparent;
-      transition: border 0.4s;
+      transition: border 0.2s ease-in;
 
       svg {
         font-size: 15px;
@@ -60,7 +60,7 @@ export const List = styled.ul`
         border-bottom: 3px solid var(--underline);
 
         svg {
-          color: var(--black);
+          color: ${(props) => props.theme.colors.primaryText};
         }
       }
     }

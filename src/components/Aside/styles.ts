@@ -26,13 +26,14 @@ export const ProfileInfosWrapper = styled.div`
   }
 
   strong {
+    color: ${(props) => props.theme.colors.primaryText};
     font-size: 28px;
   }
 
   p {
     font-size: 22px;
     word-wrap: break-word;
-    color: var(--grey-text);
+    color: ${(props) => props.theme.colors.secundaryText};
     margin-bottom: 20px;
   }
 
@@ -49,6 +50,8 @@ export const ProfileInfosWrapper = styled.div`
 `;
 
 export const EditableProfileInfosWrapper = styled.div`
+  color: ${(props) => props.theme.colors.primaryText};
+
   p {
     font-size: 18px;
     margin-bottom: 20px;
@@ -64,15 +67,15 @@ export const EditableProfileInfosWrapper = styled.div`
     width: 100%;
     height: 32px;
 
-    border: 1px solid var(--border);
-    background-color: var(--white-button);
+    border: 1px solid ${(props) => props.theme.colors.primaryBorder};
+    background-color: ${(props) => props.theme.colors.primaryButton};
     margin-bottom: 15px;
     border-radius: 6px;
 
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: var(--hover);
+      border: 1px solid ${(props) => props.theme.colors.secundaryText};
     }
   }
 `;
@@ -87,7 +90,7 @@ export const ProfileInteractionWrapper = styled.ul`
 
   li {
     margin-left: 4px;
-    color: var(--black-text);
+    color: ${(props) => props.theme.colors.secundaryText};
 
     a {
       text-decoration: none;
@@ -95,6 +98,7 @@ export const ProfileInteractionWrapper = styled.ul`
       color: inherit;
 
       span {
+        color: ${(props) => props.theme.colors.primaryText};
         font-weight: bold;
         margin-right: 4px;
       }
@@ -106,10 +110,11 @@ export const ProfileInteractionWrapper = styled.ul`
     }
 
     &:hover {
-      color: var(--blue-text);
+      color: ${(props) => props.theme.colors.blue};
 
-      a svg {
-        color: var(--blue-text);
+      a svg,
+      a span {
+        color: ${(props) => props.theme.colors.blue};
       }
     }
   }
@@ -141,7 +146,7 @@ export const MoreInfosWrapper = styled.ul`
       color: inherit;
 
       &:hover {
-        color: var(--blue-text);
+        color: ${(props) => props.theme.colors.blue};
         text-decoration: underline;
       }
     }

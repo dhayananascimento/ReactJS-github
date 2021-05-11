@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 24px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid ${(props) => props.theme.colors.primaryBorder};
 
   a {
     font-size: 20px;
     font-weight: bold;
-    color: var(--blue-text);
+    color: ${(props) => props.theme.colors.blue};
     text-decoration: none;
 
     &:hover {
@@ -19,6 +19,7 @@ export const Container = styled.div`
     display: flex;
 
     p {
+      color: ${(props) => props.theme.colors.secundaryText};
       font-size: 12px;
       margin-top: 12px;
 

@@ -6,6 +6,7 @@ import { Container, TabsWrapper, List } from "./styles";
 interface ITabs {
   activeTab?: string;
   numberOfRepos: number;
+  changeActiveTab: (tab: string) => void;
 }
 
 const tabs = {
@@ -15,7 +16,11 @@ const tabs = {
   PACKAGES: "PACKAGES",
 };
 
-const Tabs: React.FC<ITabs> = ({ activeTab, numberOfRepos }) => {
+const Tabs: React.FC<ITabs> = ({
+  activeTab,
+  numberOfRepos,
+  changeActiveTab,
+}) => {
   return (
     <Container>
       <TabsWrapper>
@@ -24,6 +29,9 @@ const Tabs: React.FC<ITabs> = ({ activeTab, numberOfRepos }) => {
             <Link
               to="/"
               className={tabs.OVERVIEW === activeTab ? "active" : undefined}
+              onClick={() => {
+                changeActiveTab(tabs.OVERVIEW);
+              }}
             >
               <FiBookOpen /> Overview
             </Link>
@@ -32,6 +40,9 @@ const Tabs: React.FC<ITabs> = ({ activeTab, numberOfRepos }) => {
             <Link
               to="/"
               className={tabs.REPOSITORIES === activeTab ? "active" : undefined}
+              onClick={() => {
+                changeActiveTab(tabs.REPOSITORIES);
+              }}
             >
               <FiBook /> Repositories <span>{numberOfRepos}</span>
             </Link>
@@ -40,6 +51,9 @@ const Tabs: React.FC<ITabs> = ({ activeTab, numberOfRepos }) => {
             <Link
               to="/"
               className={tabs.PROJECTS === activeTab ? "active" : undefined}
+              onClick={() => {
+                changeActiveTab(tabs.PROJECTS);
+              }}
             >
               <FiFolder /> Projects
             </Link>
@@ -48,6 +62,9 @@ const Tabs: React.FC<ITabs> = ({ activeTab, numberOfRepos }) => {
             <Link
               to="/"
               className={tabs.PACKAGES === activeTab ? "active" : undefined}
+              onClick={() => {
+                changeActiveTab(tabs.PACKAGES);
+              }}
             >
               <FiBox /> Packages
             </Link>
