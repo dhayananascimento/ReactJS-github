@@ -17,7 +17,7 @@ interface IHeader {
 const Header: React.FC<IHeader> = ({ theme }) => {
   return (
     <Container>
-      <GitHubIcon title="Ícone github" onClick={theme} />
+      <GitHubIcon title="Trocar tema" onClick={theme} />
 
       <Navigation>
         <InputWrapper>

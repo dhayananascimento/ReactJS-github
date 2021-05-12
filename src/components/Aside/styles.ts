@@ -73,10 +73,6 @@ export const EditableProfileInfosWrapper = styled.div`
     border-radius: 6px;
 
     transition: background-color 0.2s;
-
-    &:hover {
-      border: 1px solid ${(props) => props.theme.colors.secundaryText};
-    }
   }
 `;
 
